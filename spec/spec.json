@@ -1,0 +1,23 @@
+{
+    "version": 1.0,
+    "ecs": {
+        "version": "1.x"
+    },
+    "fields": {
+        "@timestamp": {
+            "type": "datetime",
+            "required": 1,
+            "index": 0
+        },
+        "log.level": {
+            "type": "string",
+            "required": 1,
+            "index": 1
+        },
+        "message": {
+            "type": "string",
+            "required": 1,
+            "index": 2
+        }
+    }
+}

@@ -1,0 +1,34 @@
+# Specification
+
+The specification aims to keep uniformity accross the libraries and to provide a human digestible output while producing a structured format.
+
+The ordering of the next three keys must be respected in every ecs-logging library:
+
+1. `@timestamp`, base field
+2. `log.level`, log field
+3. `message`, base field
+
+These three k-v's, furthermore define the *minimum viable product* (MVP) for a log line.
+All other keys are not subjected to an order until decided differently and can hence be appended to the log line.
+
+## Examples
+
+### Minimum Viable Product
+
+```json
+{
+    "@timestamp": "2016-05-23T08:05:34.853Z",
+    "log.level": "NOTICE",
+    "message": "Hi, I am the spec for the ECS logging libraries."
+}
+```
+
+## Nesting  & De-Dot'ing
+
+### Labels
+All keys in `labels` must not contain a `.`, as Elasticsearch will handle theses keys as nested and that violates the purpose `labels` ([ref](https://www.elastic.co/guide/en/ecs/current/ecs-base.html)).
+The substitution character can be chosen freely.
+
+## References
+* [ECS base fields](https://www.elastic.co/guide/en/ecs/current/ecs-base.html)
+* [ECS log fields](https://www.elastic.co/guide/en/ecs/current/ecs-log.html)
