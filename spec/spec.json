@@ -6,17 +6,17 @@
     "fields": {
         "@timestamp": {
             "type": "datetime",
-            "required": 1,
+            "required": true,
             "index": 0
         },
         "log.level": {
             "type": "string",
-            "required": 1,
+            "required": true,
             "index": 1
         },
         "message": {
             "type": "string",
-            "required": 1,
+            "required": true,
             "index": 2
         },
         "ecs.version": {
