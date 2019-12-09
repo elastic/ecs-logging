@@ -8,7 +8,9 @@ The ordering of the next three keys must be respected in every ecs-logging libra
 2. `log.level`, log field
 3. `message`, base field
 
-These three k-v's, furthermore define the *minimum viable product* (MVP) for a log line.
+With the fourth key, `ecs.version` ([core](https://www.elastic.co/guide/en/ecs/current/ecs-ecs.html) field) in the [ndjson](https://github.com/ndjson/ndjson-spec) output, we define the *minimum viable product* (MVP) for a log line.
+`ecs.version` must be present in case of appenders that are not adding the `ecs.version` automatically.
+
 All other keys are not subjected to an order until decided differently and can hence be appended to the log line.
 
 ## Examples

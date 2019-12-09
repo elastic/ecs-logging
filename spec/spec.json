@@ -18,6 +18,10 @@
             "type": "string",
             "required": 1,
             "index": 2
+        },
+        "ecs.version": {
+            "type": "string",
+            "required": true
         }
     }
 }
