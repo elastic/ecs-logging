@@ -8,3 +8,5 @@ ECS Logging - Common resources and issues for the language specific ECS loggers
   * [Log4j](https://github.com/elastic/ecs-logging-java/blob/master/log4j-ecs-layout/README.md)
 * [PHP](https://github.com/elastic/ecs-logging-php)
   * [Monolog v2.x](https://github.com/elastic/ecs-logging-php/blob/master/docs/Monolog_v2.md)
+* [.NET](https://github.com/elastic/ecs-dotnet)
+  * Full list of integrations: https://github.com/elastic/ecs-dotnet
