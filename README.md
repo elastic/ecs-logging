@@ -9,4 +9,18 @@ ECS Logging - Common resources and issues for the language specific ECS loggers
 * [PHP](https://github.com/elastic/ecs-logging-php)
   * [Monolog v2.x](https://github.com/elastic/ecs-logging-php/blob/master/docs/Monolog_v2.md)
 * [.NET](https://github.com/elastic/ecs-dotnet)
-  * Full list of integrations: https://github.com/elastic/ecs-dotnet
+  * [Serilog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.Serilog)
+* [JavaScript](https://github.com/elastic/ecs-logging-js)
+  * [Winston](https://github.com/elastic/ecs-logging-js/tree/master/loggers/winston)
+  * [Morgan](https://github.com/elastic/ecs-logging-js/tree/master/loggers/morgan)
+
+## APM
+
+* [.NET](https://github.com/elastic/ecs-dotnet)
+  * [Serilog Enricher](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.Apm.SerilogEnricher)
+  * [NLog Enricher](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.Apm.NLog)
+  
+## Benchmarking
+
+* [.NET](https://github.com/elastic/ecs-dotnet)
+  * [BenchmarkDotNet Exporter](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.BenchmarkDotNetExporter)
