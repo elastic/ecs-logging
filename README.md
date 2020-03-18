@@ -13,6 +13,7 @@ ECS Logging - Common resources and issues for the language specific ECS loggers
 * [JavaScript](https://github.com/elastic/ecs-logging-js)
   * [Winston](https://github.com/elastic/ecs-logging-js/tree/master/loggers/winston)
   * [Morgan](https://github.com/elastic/ecs-logging-js/tree/master/loggers/morgan)
+* [Python](https://github.com/elastic/ecs-logging-python)
 
 ## APM
 
