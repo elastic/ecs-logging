@@ -1,5 +1,10 @@
+<img align="right" width="auto" height="auto" src="https://www.elastic.co/static-res/images/elastic-logo-200.png"/>
+
 # ecs-logging
-ECS Logging - Common resources and issues for the language specific ECS loggers
+
+[ECS](https://www.elastic.co/guide/en/ecs/current/index.html) Logging - Common resources and issues for the language specific ECS loggers
+
+---
 
 ## Loggers
 * [Java](https://github.com/elastic/ecs-logging-java)
