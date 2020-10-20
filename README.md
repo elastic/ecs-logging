@@ -20,6 +20,8 @@
   * [Winston](https://github.com/elastic/ecs-logging-js/tree/master/loggers/winston)
   * [Morgan](https://github.com/elastic/ecs-logging-js/tree/master/loggers/morgan)
 * [Python](https://github.com/elastic/ecs-logging-python)
+* Go
+  * [zap](https://github.com/elastic/ecs-logging-go-zap)
 
 ## APM
 
