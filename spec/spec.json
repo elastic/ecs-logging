@@ -38,6 +38,18 @@
                     "substitute": "_"
                 }
             }
+        },
+        "trace.id": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-tracing.html",
+            "comment": "When APM agents add this field to the context, ecs loggers should pick it up and add it to the log event."
+        },
+        "transaction.id": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-tracing.html",
+            "comment": "When APM agents add this field to the context, ecs loggers should pick it up and add it to the log event."
         }
     }
 }

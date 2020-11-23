@@ -60,6 +60,8 @@ The following example describes a richer set of fields in an event that has not 
         "app_uptime": "2016-05-15T14:03:12.345Z"
     },
     "tags": ["production", "env001"],
+    "trace.id": "4bf92f3577b34da6a3ce929d0e0e4736",
+    "transaction.id": "00f067aa0ba902b7"
 }
 ```
 
