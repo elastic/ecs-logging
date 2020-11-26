@@ -50,6 +50,19 @@
             "required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-tracing.html",
             "comment": "When APM agents add this field to the context, ecs loggers should pick it up and add it to the log event."
+        },
+        "service.name": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-service.html",
+            "comment": "Configurable by users. When an APM agent is active, they should auto-configure it if not already set."
+        },
+        "event.dataset": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-event.html",
+            "default": "${service.name}.log/${service.name}.${appender.name}",
+            "comment": "Configurable by users. By default derived from the service.name. When logging is auto-configured by APM Agents, they should set this to the log appender name if available. The field helps to filter for different log streams from the same pod, for example and is required for log anomaly detection."
         }
     }
 }
