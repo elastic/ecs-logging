@@ -61,7 +61,9 @@ The following example describes a richer set of fields in an event that has not 
     },
     "tags": ["production", "env001"],
     "trace.id": "4bf92f3577b34da6a3ce929d0e0e4736",
-    "transaction.id": "00f067aa0ba902b7"
+    "transaction.id": "00f067aa0ba902b7",
+    "service.name": "opbeans",
+    "event.dataset": "opbeans.log"
 }
 ```
 
