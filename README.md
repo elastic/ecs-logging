@@ -7,10 +7,12 @@
 ---
 
 ## Loggers
-* [Java](https://github.com/elastic/ecs-logging-java)
-  * [Logback](https://github.com/elastic/ecs-logging-java/blob/master/logback-ecs-encoder/README.md)
-  * [Log4j2](https://github.com/elastic/ecs-logging-java/blob/master/log4j2-ecs-layout/README.md)
-  * [Log4j](https://github.com/elastic/ecs-logging-java/blob/master/log4j-ecs-layout/README.md)
+* [Java](https://github.com/elastic/ecs-logging-java) ([docs](https://www.elastic.co/guide/en/ecs-logging/java/current/intro.html))
+  * [Logback](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
+  * [Log4j2](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
+  * [Log4j](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
+  * [Java Util Logging](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
+  * [JBoss LogManager](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
 * [PHP](https://github.com/elastic/ecs-logging-php)
   * [Monolog v2.x](https://github.com/elastic/ecs-logging-php/blob/master/docs/Monolog_v2.md)
 * [.NET](https://github.com/elastic/ecs-dotnet)
