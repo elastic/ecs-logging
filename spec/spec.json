@@ -77,13 +77,19 @@
                 "The field helps to filter for different log streams from the same pod, for example and is required for log anomaly detection."
             ]
         },
+        "log.logger": {
+            "type": "string",
+            "required": false,
+            "nesting_allowed": true,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html"
+        },
         "log.origin.file.line": {
             "type": "integer",
             "required": false,
             "nesting_allowed": true,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html",
             "comment": "Should be opt-in as it requires the logging library to capture a stack trace for each log event."
-        },,
+        },
         "log.origin.file.name": {
             "type": "string",
             "required": false,

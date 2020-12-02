@@ -44,7 +44,7 @@ The following example describes a richer set of fields in an event that has not 
         "origin": {
             "file": {
                 "name": "App.java",
-                "line": 42,
+                "line": 42
             },
             "function": "methodName"
         }
