@@ -22,6 +22,7 @@
 * [Python](https://github.com/elastic/ecs-logging-python)
 * Go
   * [zap](https://github.com/elastic/ecs-logging-go-zap)
+* [Ruby](https://github.com/elastic/ecs-logging-ruby)
 
 ## APM
 
