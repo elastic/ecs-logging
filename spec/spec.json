@@ -80,27 +80,27 @@
         "log.logger": {
             "type": "string",
             "required": false,
-            "nesting_allowed": true,
+            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html"
         },
         "log.origin.file.line": {
             "type": "integer",
             "required": false,
-            "nesting_allowed": true,
+            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html",
             "comment": "Should be opt-in as it requires the logging library to capture a stack trace for each log event."
         },
         "log.origin.file.name": {
             "type": "string",
             "required": false,
-            "nesting_allowed": true,
+            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html",
             "comment": "Should be opt-in as it requires the logging library to capture a stack trace for each log event."
         },
         "log.origin.function": {
             "type": "string",
             "required": false,
-            "nesting_allowed": true,
+            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html",
             "comment": "Should be opt-in as it requires the logging library to capture a stack trace for each log event."
         }
