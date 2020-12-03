@@ -82,6 +82,52 @@
                 "",
                 "The field helps to filter for different log streams from the same pod, for example and is required for log anomaly detection."
             ]
+        },
+        "process.thread.name": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-process.html"
+        },
+        "log.logger": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html"
+        },
+        "log.origin.file.line": {
+            "type": "integer",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html",
+            "comment": "Should be opt-in as it requires the logging library to capture a stack trace for each log event."
+        },
+        "log.origin.file.name": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html",
+            "comment": "Should be opt-in as it requires the logging library to capture a stack trace for each log event."
+        },
+        "log.origin.function": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html",
+            "comment": "Should be opt-in as it requires the logging library to capture a stack trace for each log event."
+        },
+        "error.type": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
+            "comment": "The exception type or class, such as `java.lang.IllegalArgumentException`."
+        },
+        "error.message": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
+            "comment": "The message of the exception."
+        },
+        "error.stack_trace": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
+            "comment": "The stack trace of the exception as plain text."
         }
     }
 }
