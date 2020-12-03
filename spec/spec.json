@@ -80,7 +80,6 @@
         "process.thread.name": {
             "type": "string",
             "required": false,
-            "nesting_allowed": true,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-process.html"
         }
     }
