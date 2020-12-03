@@ -15,7 +15,7 @@
             "type": "string",
             "required": true,
             "index": 1,
-            "nesting_required": true,
+            "nesting_allowed": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-log.html"
         },
         "message": {
@@ -27,7 +27,6 @@
         "ecs.version": {
             "type": "string",
             "required": true,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-ecs.html"
         },
         "labels": {
@@ -44,21 +43,18 @@
         "trace.id": {
             "type": "string",
             "required": false,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-tracing.html",
             "comment": "When APM agents add this field to the context, ecs loggers should pick it up and add it to the log event."
         },
         "transaction.id": {
             "type": "string",
             "required": false,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-tracing.html",
             "comment": "When APM agents add this field to the context, ecs loggers should pick it up and add it to the log event."
         },
         "service.name": {
             "type": "string",
             "required": false,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-service.html",
             "comment": [
                 "Configurable by users.",
@@ -68,7 +64,6 @@
         "event.dataset": {
             "type": "string",
             "required": false,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-event.html",
             "default": "${service.name}.log OR ${service.name}.${appender.name}",
             "comment": [
