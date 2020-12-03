@@ -80,21 +80,18 @@
         "error.type": {
             "type": "string",
             "required": false,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
             "comment": "The exception type or class, such as `java.lang.IllegalArgumentException`."
         },
         "error.message": {
             "type": "string",
             "required": false,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
             "comment": "The message of the exception."
         },
         "error.stack_trace": {
             "type": "string",
             "required": false,
-            "nesting_required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
             "comment": "The stack trace of the exception as plain text."
         }
