@@ -21,8 +21,8 @@
                 "This field SHOULD NOT be a nested object field but at the top level with a dot in the property name.",
                 "This is to make the JSON logs more human-readable.",
                 "Loggers MAY indent the log level so that the `message` field always starts at the exact same offset,",
-                "no matter the number of character the log level has.",
-                "For example, `'DEBUG'` (5 chars), or ` 'WARN'` (4 chars indented to 5 chars)."
+                "no matter the number of characters the log level has.",
+                "For example: `'DEBUG'` (5 chars) will not be indented, whereas ` 'WARN'` (4 chars) will be indented by one space character."
             ]
         },
         "message": {
