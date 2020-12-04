@@ -1,0 +1,51 @@
+// tag::logs[]
+
+. Follow the {filebeat-ref}/filebeat-installation-configuration.html[Filebeat quick start]
+. Add the following configuration to your `filebeat.yaml` file.
+
+[source,yaml]
+.filebeat.yaml
+----
+filebeat.inputs:
+- type: log
+  paths: /path/to/logs.json
+  json.keys_under_root: true
+  json.overwrite_keys: true
+  json.add_error_key: true
+  json.expand_keys: true
+----
+// end::logs[]
+
+
+// tag::kubernetes[]
+. Follow the {filebeat-ref}/running-on-kubernetes.html[Run Filebeat on Kubernetes] guide.
+. Enable https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover-hints.html[hints-based autodiscover] (uncomment the corresponding section in `filebeat-kubernetes.yaml`).
+. Add these annotations to your pods that log using ECS loggers.
+  This will make sure the logs are parsed appropriately.
+
+[source,yaml]
+----
+annotations:
+  co.elastic.logs/json.keys_under_root: true
+  co.elastic.logs/json.overwrite_keys: true
+  co.elastic.logs/json.add_error_key: true
+  co.elastic.logs/json.expand_keys: true
+----
+// end::kubernetes[]
+
+
+// tag::docker[]
+. Follow the {filebeat-ref}/running-on-docker.html[Run Filebeat on Docker] guide.
+. Enable https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover-hints.html[hints-based autodiscover] (uncomment the corresponding section in `filebeat-kubernetes.yaml`).
+. Add these labels to your containers that log using ECS loggers.
+  This will make sure the logs are parsed appropriately.
+
+[source,yaml]
+----
+co.elastic.logs/json.keys_under_root: true
+co.elastic.logs/json.overwrite_keys: true
+co.elastic.logs/json.add_error_key: true
+co.elastic.logs/json.expand_keys: true
+----
+// end::docker[]
+
