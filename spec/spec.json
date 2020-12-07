@@ -82,7 +82,51 @@
                 "they should set `event.dataset=${service.name}.${appender.name}` if the appender name is available in the logging library.",
                 "Otherwise, agents should also set `event.dataset=${service.name}.log`",
                 "",
-                "The field helps to filter for different log streams from the same pod, for example and is required for log anomaly detection."
+                "The field helps to filter for different log streams from the same pod, for example and is required for log anomaly detection.",
+                "",
+                "Should have the same value as `data_stream.dataset`.",
+                "",
+                "In 8.0, `event.dataset` will be removed in favor of `data_stream.dataset`."
+            ]
+        },
+        "data_stream.dataset": {
+            "type": "string",
+            "required": false,
+            "url": "https://github.com/elastic/ecs/pull/1145",
+            "default": "${service.name}.log OR ${service.name}.${appender.name}",
+            "sanitization": {
+                "value": {
+                    "replacements": ["\\", "/", "*", "?", "\"", "<", ">", "|", " ", "-"],
+                    "substitute": "_",
+                    "max_chars": 100
+                }
+            },
+            "comment": [
+                "Configurable by users.",
+                "Influences which index the logs will be stored in (`logs-{data_stream.dataset}-{data_stream.namespace}`)",
+                "If unspecified, Filebeat will set the value to `default`.",
+                "",
+                "Should have the same value as `event.dataset`."
+            ]
+        },
+        "data_stream.namespace": {
+            "type": "string",
+            "required": false,
+            "url": "https://github.com/elastic/ecs/pull/1145",
+            "default": null,
+            "sanitization": {
+                "value": {
+                    "replacements": ["\\", "/", "*", "?", "\"", "<", ">", "|", " "],
+                    "substitute": "_",
+                    "max_chars": 100
+                }
+            },
+            "comment": [
+                "Configurable by users.",
+                "Influences which index the logs will be stored in (`logs-{data_stream.dataset}-{data_stream.namespace}`)",
+                "If unspecified, Filebeat will set the value to `default`.",
+                "",
+                "Should have the same value as `event.dataset`."
             ]
         },
         "process.thread.name": {
