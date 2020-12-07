@@ -58,6 +58,18 @@ showing only the logs which belong to the corresponding request.
 Vice versa, you can also jump from a log line in the Logs UI to the Span Timeline of the APM UI.
 --
 
+*Broad support for languages and loggers*::
++
+--
+We have loggers for https://github.com/elastic/ecs-dotnet[.NET],
+Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
+https://www.elastic.co/guide/en/ecs-logging/java/current/intro.html[Java],
+https://github.com/elastic/ecs-logging-js[JavaScript],
+https://github.com/elastic/ecs-logging-php[PHP],
+https://github.com/elastic/ecs-logging-python[Python],
+and https://github.com/elastic/ecs-logging-ruby[Ruby].
+--
+
 [float]
 ==== Additional advantages when using in combination with Filebeat
 
@@ -92,5 +104,5 @@ This is much more efficient than using daily indices.
 *Efficient Elasticsearch mappings*::
 +
 --
-Leverage Filebeat's default ECS-compatible {filebeat-ref}/configuration-template.html[index template]
+Leverage Filebeat's default ECS-compatible {filebeat-ref}/configuration-template.html[index template].
 --

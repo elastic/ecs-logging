@@ -7,16 +7,14 @@ include::./tab-widgets/code.asciidoc[]
 [[setup-step-1]]
 === Step 1: Configure application logging
 
-Refer to the installation instructions of the individual loggers:
-
-* https://github.com/elastic/ecs-dotnet[.NET]
-* Go
-** https://github.com/elastic/ecs-logging-go-zap[zap]
-* https://www.elastic.co/guide/en/ecs-logging/java/current/intro.html[Java]
-* https://github.com/elastic/ecs-logging-js[JavaScript]
-* https://github.com/elastic/ecs-logging-php[PHP]
-* https://github.com/elastic/ecs-logging-python[Python]
-* https://github.com/elastic/ecs-logging-ruby[Ruby]
+Refer to the installation instructions of the individual loggers for
+https://github.com/elastic/ecs-dotnet#logging[.NET],
+Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
+https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html[Java],
+https://github.com/elastic/ecs-logging-js[JavaScript],
+https://github.com/elastic/ecs-logging-php[PHP],
+https://github.com/elastic/ecs-logging-python[Python],
+and https://github.com/elastic/ecs-logging-ruby[Ruby].
 
 [float]
 [[setup-step-2]]
