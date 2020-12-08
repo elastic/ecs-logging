@@ -104,7 +104,7 @@
             "comment": [
                 "Configurable by users.",
                 "Influences which data stream the logs will be stored in (`logs-{data_stream.dataset}-{data_stream.namespace}`)",
-                "If unspecified, Filebeat will set the value to `default`.",
+                "If unspecified, Filebeat will set the value to `generic`.",
                 "",
                 "Should have the same value as `event.dataset`."
             ]
