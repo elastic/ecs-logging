@@ -1,32 +1,44 @@
+////
+  This content is shared across all ECS Logging plugins.
+  Changes made here must be relevant to all plugin languages.
+  Include this file with the following lines:
+  :ecs-repo-dir:  {ecs-logging-root}/docs/
+  include::{ecs-repo-dir}/setup.asciidoc[tag=<tag-name>]
+  Need to change heading levels? Use `leveloffset`
+////
+
 [[setup]]
 == Get Started
-
-include::./tab-widgets/code.asciidoc[]
 
 [float]
 [[setup-step-1]]
 === Step 1: Configure application logging
 
-Refer to the installation instructions of the individual loggers for
-https://github.com/elastic/ecs-dotnet#logging[.NET],
-Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
-https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html[Java],
-https://github.com/elastic/ecs-logging-js[JavaScript],
-https://github.com/elastic/ecs-logging-php[PHP],
-https://github.com/elastic/ecs-logging-python[Python],
-and https://github.com/elastic/ecs-logging-ruby[Ruby].
+// Refer to the installation instructions of the individual loggers for
+// https://github.com/elastic/ecs-dotnet#logging[.NET],
+// Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
+// https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html[Java],
+// https://github.com/elastic/ecs-logging-js[JavaScript],
+// https://github.com/elastic/ecs-logging-php[PHP],
+// https://github.com/elastic/ecs-logging-python[Python],
+// and https://github.com/elastic/ecs-logging-ruby[Ruby].
 
+// tag::enable-apm-log-correlation[]
 [float]
 [[setup-step-2]]
 === Step 2: Enable APM log correlation (optional)
+
 If you are using an Elastic APM agent,
 enable {apm-get-started-ref}/observability-integrations.html#apm-logging-integration[log correlation].
+// end::enable-apm-log-correlation[]
 
+// tag::configure-filebeat[]
 [float]
 [[setup-step-3]]
 === Step 3: Configure Filebeat
 
+include::./tab-widgets/code.asciidoc[]
 include::./tab-widgets/filebeat-widget.asciidoc[]
 
 For more information, check the {filebeat-ref}/configuring-howto-filebeat.html[Filebeat documentation].
-
+// end::configure-filebeat[]
