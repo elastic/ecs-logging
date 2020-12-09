@@ -1,12 +1,3 @@
-////
-  This content is shared across all ECS Logging plugins.
-  Changes made here must be relevant to all plugin languages.
-  Include this file with the following lines:
-  :ecs-repo-dir:  {ecs-logging-root}/docs/
-  include::{ecs-repo-dir}/intro.asciidoc[]
-  Need to change heading levels? Use `leveloffset`
-////
-
 Centralized application logging with the Elastic stack made easy.
 
 [role="screenshot"]
@@ -112,3 +103,16 @@ This is much more efficient than using daily indices.
 --
 Leverage Filebeat's default ECS-compatible {filebeat-ref}/configuration-template.html[index template].
 --
+
+// To do: Update these links to be documentation links
+[float]
+=== Get started
+
+Refer to the installation instructions of the individual loggers for
+https://github.com/elastic/ecs-dotnet#logging[.NET],
+Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
+https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html[Java],
+https://github.com/elastic/ecs-logging-js[JavaScript],
+https://github.com/elastic/ecs-logging-php[PHP],
+https://github.com/elastic/ecs-logging-python[Python],
+and https://github.com/elastic/ecs-logging-ruby[Ruby].
