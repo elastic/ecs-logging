@@ -185,7 +185,7 @@ Refer to the documentation of the individual loggers on how to set these fields.
 |`"my-service"`
 
 |{ecs-ref}/ecs-event.html[`event.dataset`]
-| Enables the {logs-ref}/detect-log-anomalies.html[log rate anomaly detection].
+| Enables the {observability-guide}/inspect-log-anomalies.html[log rate anomaly detection].
 |`"my-service.log"`
 
 |===
