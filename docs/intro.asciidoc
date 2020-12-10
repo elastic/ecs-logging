@@ -24,6 +24,19 @@ They make it easy to format your logs into ECS-compatible JSON. For example:
 {"@timestamp":"2019-08-06T14:08:40.199Z", "log.level":"DEBUG", "message":"init find form", "service.name":"spring-petclinic","process.thread.name":"http-nio-8080-exec-8","log.logger":"org.springframework.samples.petclinic.owner.OwnerController","transaction.id":"28b7fb8d5aba51f1","trace.id":"2869b25b5469590610fea49ac04af7da"}
 ----
 
+// To do: Update these links to be documentation links
+[float]
+=== Get started
+
+Refer to the installation instructions of the individual loggers for
+https://github.com/elastic/ecs-dotnet#logging[.NET],
+Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
+https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html[Java],
+https://github.com/elastic/ecs-logging-js[JavaScript],
+https://github.com/elastic/ecs-logging-php[PHP],
+https://github.com/elastic/ecs-logging-python[Python],
+and https://github.com/elastic/ecs-logging-ruby[Ruby].
+
 [float]
 === Why ECS logging?
 
@@ -56,18 +69,6 @@ you can leverage the {apm-get-started-ref}/observability-integrations.html#apm-l
 This lets you jump from the {kibana-ref}/spans.html[Span timeline in the APM UI] to the {observability-guide}/monitor-logs.html[Logs app],
 showing only the logs which belong to the corresponding request.
 Vice versa, you can also jump from a log line in the Logs UI to the Span Timeline of the APM UI.
---
-
-*Broad support for languages and loggers*::
-+
---
-We have loggers for https://github.com/elastic/ecs-dotnet[.NET],
-Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
-https://www.elastic.co/guide/en/ecs-logging/java/current/intro.html[Java],
-https://github.com/elastic/ecs-logging-js[JavaScript],
-https://github.com/elastic/ecs-logging-php[PHP],
-https://github.com/elastic/ecs-logging-python[Python],
-and https://github.com/elastic/ecs-logging-ruby[Ruby].
 --
 
 [float]
@@ -107,15 +108,99 @@ This is much more efficient than using daily indices.
 Leverage Filebeat's default ECS-compatible {filebeat-ref}/configuration-template.html[index template].
 --
 
-// To do: Update these links to be documentation links
 [float]
-=== Get started
+=== Field mapping
 
-Refer to the installation instructions of the individual loggers for
-https://github.com/elastic/ecs-dotnet#logging[.NET],
-Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
-https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html[Java],
-https://github.com/elastic/ecs-logging-js[JavaScript],
-https://github.com/elastic/ecs-logging-php[PHP],
-https://github.com/elastic/ecs-logging-python[Python],
-and https://github.com/elastic/ecs-logging-ruby[Ruby].
+[float]
+==== Default fields
+
+These fields are populated by the ECS loggers by default.
+Some of them, such as the `log.origin.*` fields, may have to be explicitly enabled.
+Others, such as `process.thread.name`, are not applicable to all languages.
+Refer to the documentation of the individual loggers for more information.
+
+|===
+|ECS field | Description | Example
+
+|{ecs-ref}/ecs-base.html[`@timestamp`]
+|The timestamp of the log event.
+|`"2019-08-06T12:09:12.375Z"`
+
+|{ecs-ref}/ecs-log.html[`log.level`]
+|The level or severity of the log event.
+|`"INFO"`
+
+|{ecs-ref}/ecs-log.html[`log.logger`]
+|The name of the logger inside an application.
+|`"org.example.MyClass"`
+
+|{ecs-ref}/ecs-log.html[`log.origin.file.name`]
+|The name of the file containing the source code which originated the log event.
+|`"App.java"`
+
+|{ecs-ref}/ecs-log.html[`log.origin.file.line`]
+|The line number of the file containing the source code which originated the log event.
+|`42`
+
+|{ecs-ref}/ecs-log.html[`log.origin.function`]
+|The name of the function or method which originated the log event.
+|`"methodName"`
+
+|{ecs-ref}/ecs-base.html[`message`]
+|The log message.
+|`"Hello World!"`
+
+|{ecs-ref}/ecs-error.html[`error.type`]
+|Only present for logs that contain an exception or error.
+ The type or class of the error if this log event contains an exception.
+|`"java.lang.NullPointerException"`
+
+|{ecs-ref}/ecs-error.html[`error.message`]
+|Only present for logs that contain an exception or error.
+ The message of the exception or error.
+|`"The argument cannot be null"`
+
+|{ecs-ref}/ecs-error.html[`error.stack_trace`]
+|Only present for logs that contain an exception or error.
+ The full stack trace of the exception or error as a raw string.
+|`"Exception in thread "main" java.lang.NullPointerException\n\tat org.example.App.methodName(App.java:42)"`
+
+|{ecs-ref}/ecs-process.html[`process.thread.name`]
+|The name of the thread the event has been logged from.
+|`"main"`
+
+|===
+
+
+[float]
+==== Configurable fields
+
+Refer to the documentation of the individual loggers on how to set these fields.
+
+|===
+|ECS field | Description | Example
+
+|{ecs-ref}/ecs-service.html[`service.name`]
+| Helps to filer the logs by service.
+|`"my-service"`
+
+|{ecs-ref}/ecs-event.html[`event.dataset`]
+| Enables the {logs-ref}/detect-log-anomalies.html[log rate anomaly detection].
+|`"my-service.log"`
+
+|===
+
+
+[float]
+==== Custom fields
+
+Most loggers allow you to add additional custom fields.
+This includes both, static and dynamic ones.
+Examples for dynamic fields are logging structured objects,
+or fields from a thread local context, such as `MDC` or `ThreadContext`.
+
+When adding custom fields, we recommend using existing {ecs-ref}/ecs-field-reference.html[ECS fields] for these custom values.
+If there is no appropriate ECS field,
+consider prefixing your fields with `labels.`, as in `labels.foo`, for simple key/value pairs.
+For nested structures, consider prefixing with `custom.`.
+This approach protects against conflicts in case ECS later adds the same fields but with a different mapping.
