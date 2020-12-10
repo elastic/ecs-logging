@@ -1,5 +1,5 @@
 ++++
-<div class="tabs" data-tab-group="os">
+<div class="tabs" data-tab-group="fb">
   <div role="tablist" aria-label="filebeat">
     <button role="tab"
             aria-selected="true"
