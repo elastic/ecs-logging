@@ -19,6 +19,7 @@
   * [Serilog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.Serilog)
   * [NLog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.NLog)
 * [JavaScript](https://github.com/elastic/ecs-logging-js)
+  * [Pino](https://github.com/elastic/ecs-logging-js/tree/master/loggers/pino)
   * [Winston](https://github.com/elastic/ecs-logging-js/tree/master/loggers/winston)
   * [Morgan](https://github.com/elastic/ecs-logging-js/tree/master/loggers/morgan)
 * [Python](https://github.com/elastic/ecs-logging-python)
@@ -31,7 +32,7 @@
 * [.NET](https://github.com/elastic/ecs-dotnet)
   * [Serilog Enricher](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.Apm.SerilogEnricher)
   * [NLog Enricher](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.Apm.NLog)
-  
+
 ## Benchmarking
 
 * [.NET](https://github.com/elastic/ecs-dotnet)
