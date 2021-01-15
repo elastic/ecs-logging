@@ -2,7 +2,9 @@
 
 # ecs-logging
 
-[ECS](https://www.elastic.co/guide/en/ecs/current/index.html) Logging - Common resources and issues for the language specific ECS loggers
+[ECS](https://www.elastic.co/guide/en/ecs/current/index.html) Logging – Common resources and issues for the language specific ECS loggers.
+
+Learn more in the [ECS Logging Reference](https://www.elastic.co/guide/en/ecs-logging/overview/current/index.html).
 
 ---
 
@@ -15,17 +17,17 @@
   * [JBoss LogManager](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
 * [PHP](https://github.com/elastic/ecs-logging-php)
   * [Monolog v2.x](https://github.com/elastic/ecs-logging-php/blob/master/docs/Monolog_v2.md)
-* [.NET](https://github.com/elastic/ecs-dotnet)
+* [.NET](https://github.com/elastic/ecs-dotnet) ([docs](https://www.elastic.co/guide/en/ecs-logging/dotnet/current/intro.html))
   * [Serilog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.Serilog)
   * [NLog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.NLog)
 * [JavaScript](https://github.com/elastic/ecs-logging-js)
   * [Pino](https://github.com/elastic/ecs-logging-js/tree/master/loggers/pino)
   * [Winston](https://github.com/elastic/ecs-logging-js/tree/master/loggers/winston)
   * [Morgan](https://github.com/elastic/ecs-logging-js/tree/master/loggers/morgan)
-* [Python](https://github.com/elastic/ecs-logging-python)
+* [Python](https://github.com/elastic/ecs-logging-python) ([docs](https://www.elastic.co/guide/en/ecs-logging/python/current/intro.html))
 * Go
-  * [zap](https://github.com/elastic/ecs-logging-go-zap)
-* [Ruby](https://github.com/elastic/ecs-logging-ruby)
+  * [zap](https://github.com/elastic/ecs-logging-go-zap) ([docs](https://www.elastic.co/guide/en/ecs-logging/go-zap/current/intro.html))
+* [Ruby](https://github.com/elastic/ecs-logging-ruby) ([docs](https://www.elastic.co/guide/en/ecs-logging/ruby/current/intro.html))
 
 ## APM
 
