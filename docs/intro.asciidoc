@@ -28,14 +28,15 @@ They make it easy to format your logs into ECS-compatible JSON. For example:
 [float]
 === Get started
 
-Refer to the installation instructions of the individual loggers for
-https://github.com/elastic/ecs-dotnet#logging[.NET],
-Go (https://github.com/elastic/ecs-logging-go-zap[zap]),
-https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html[Java],
-https://github.com/elastic/ecs-logging-js[JavaScript],
-https://github.com/elastic/ecs-logging-php[PHP],
-https://github.com/elastic/ecs-logging-python[Python],
-and https://github.com/elastic/ecs-logging-ruby[Ruby].
+Refer to the installation instructions of the individual loggers:
+
+* {ecs-logging-dotnet-ref}/setup.html[.NET]
+* Go ({ecs-logging-go-zap-ref}/setup.html[zap])
+* {ecs-logging-java-ref}/setup.html[Java]
+* https://github.com/elastic/ecs-logging-js[JavaScript]
+* https://github.com/elastic/ecs-logging-php[PHP]
+* {ecs-logging-python-ref}/installation.html[Python]
+* {ecs-logging-ruby-ref}/setup.html[Ruby]
 
 [float]
 === Why ECS logging?
