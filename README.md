@@ -27,6 +27,7 @@ Learn more in the [ECS Logging Reference](https://www.elastic.co/guide/en/ecs-lo
 * [Python](https://github.com/elastic/ecs-logging-python) ([docs](https://www.elastic.co/guide/en/ecs-logging/python/current/intro.html))
 * Go
   * [zap](https://github.com/elastic/ecs-logging-go-zap) ([docs](https://www.elastic.co/guide/en/ecs-logging/go-zap/current/intro.html))
+  * [logrus](https://github.com/elastic/ecs-logging-go-logrus) ([docs](https://www.elastic.co/guide/en/ecs-logging/go-logrus/current/index.html))
 * [Ruby](https://github.com/elastic/ecs-logging-ruby) ([docs](https://www.elastic.co/guide/en/ecs-logging/ruby/current/intro.html))
 
 ## APM
