@@ -1,0 +1,4 @@
+---
+loggers:
+  - REPO: "ecs-logging-java"
+    SPEC_PATH: "ecs-logging-core/src/test/resources/spec"
