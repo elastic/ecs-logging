@@ -1,8 +1,10 @@
 ---
 loggers:
-  - REPO: "ecs-logging-dotnet"
+  - REPO: "ecs-dotnet"
     SPEC_PATH: "tests/Elastic.CommonSchema.Tests/Specs"
   - REPO: "ecs-logging-go-logrus"
+    SPEC_PATH: "internal/spec"
+  - REPO: "ecs-logging-go-zap"
     SPEC_PATH: "internal/spec"
   - REPO: "ecs-logging-java"
     SPEC_PATH: "ecs-logging-core/src/test/resources/spec"
@@ -12,5 +14,3 @@ loggers:
     SPEC_PATH: "tests/resources"
   - REPO: "ecs-logging-ruby"
     SPEC_PATH: "spec/fixtures/spec"
-  - REPO: "ecs-logging-zap"
-    SPEC_PATH: "internal/spec"

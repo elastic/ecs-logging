@@ -45,13 +45,13 @@ pipeline {
     booleanParam(name: 'DRY_RUN_MODE', defaultValue: false, description: 'If true, allows to execute this pipeline in dry run mode, without sending a PR.')
     booleanParam(name: 'FORCE_SEND_PR', defaultValue: false, description: 'If true, will force sending a PR, although it could be affected by the value off the DRY_RUN parameter: if the latter is true, a message will be printed in the console.')
     choice(name: 'ECS_REPO', choices: ['all',
-                                        'ecs-logging-dotnet',
+                                        'ecs-dotnet',
                                         'ecs-logging-go-logrus',
+                                        'ecs-logging-go-zap',
                                         'ecs-logging-java',
                                         'ecs-logging-js',
                                         'ecs-logging-python',
-                                        'ecs-logging-ruby',
-                                        'ecs-logging-zap'], description: 'Name of the ECS repo you want to update its specs.')
+                                        'ecs-logging-ruby'], description: 'Name of the ECS repo you want to update its specs.')
   }
   stages {
     stage('Checkout'){
