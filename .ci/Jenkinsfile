@@ -49,7 +49,7 @@ pipeline {
                                         'ecs-logging-go-logrus',
                                         'ecs-logging-go-zap',
                                         'ecs-logging-java',
-                                        'ecs-logging-js',
+                                        'ecs-logging-nodejs',
                                         'ecs-logging-python',
                                         'ecs-logging-ruby'], description: 'Name of the ECS repo you want to update its specs.')
   }
