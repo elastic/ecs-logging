@@ -46,7 +46,7 @@ pipeline {
     booleanParam(name: 'FORCE_SEND_PR', defaultValue: false, description: 'If true, will force sending a PR, although it could be affected by the value off the DRY_RUN parameter: if the latter is true, a message will be printed in the console.')
     choice(name: 'REPO_NAME', choices: ['all',
                                         'ecs-logging-dotnet',
-                                        'ecs-logging-go-logrus'
+                                        'ecs-logging-go-logrus',
                                         'ecs-logging-java',
                                         'ecs-logging-js',
                                         'ecs-logging-python',
