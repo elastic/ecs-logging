@@ -8,7 +8,7 @@ loggers:
     SPEC_PATH: "internal/spec"
   - REPO: "ecs-logging-java"
     SPEC_PATH: "ecs-logging-core/src/test/resources/spec"
-  - REPO: "ecs-logging-js"
+  - REPO: "ecs-logging-nodejs"
     SPEC_PATH: "utils/ecs-logging"
   - REPO: "ecs-logging-python"
     SPEC_PATH: "tests/resources"
