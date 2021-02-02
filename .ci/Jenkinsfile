@@ -57,7 +57,7 @@ pipeline {
     stage('Checkout'){
       steps {
         deleteDir()
-        gitCheckout(basedir: "${BASE_DIR}", branch: 'master',
+        gitCheckout(basedir: "${BASE_DIR}",
           repo: "git@github.com:elastic/${REPO}.git",
           credentialsId: "${JOB_GIT_CREDENTIALS}"
         )
