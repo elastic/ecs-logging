@@ -28,7 +28,7 @@ pipeline {
     JOB_GIT_CREDENTIALS = "f6c7695a-671e-4f4f-a331-acdce44ff9ba"
     PATH = "${env.PATH}:${env.WORKSPACE}/bin"
     PIPELINE_LOG_LEVEL = 'INFO'
-    REPO_NAME = "${params?.REPO_NAME}"
+    ECS_REPO = "${params?.ECS_REPO}"
   }
   options {
     timeout(time: 3, unit: 'HOURS')
@@ -44,7 +44,7 @@ pipeline {
   parameters {
     booleanParam(name: 'DRY_RUN_MODE', defaultValue: false, description: 'If true, allows to execute this pipeline in dry run mode, without sending a PR.')
     booleanParam(name: 'FORCE_SEND_PR', defaultValue: false, description: 'If true, will force sending a PR, although it could be affected by the value off the DRY_RUN parameter: if the latter is true, a message will be printed in the console.')
-    choice(name: 'REPO_NAME', choices: ['all',
+    choice(name: 'ECS_REPO', choices: ['all',
                                         'ecs-logging-dotnet',
                                         'ecs-logging-go-logrus',
                                         'ecs-logging-java',
@@ -133,7 +133,7 @@ def generateSteps() {
   def parallelTasks = [:]
   loggers['loggers'].each { logger ->
     if (logger.SPEC_PATH.trim()) {
-      if (env.REPO_NAME == 'all' || env.REPO_NAME == logger.REPO) {
+      if (env.ECS_REPO == 'all' || env.ECS_REPO == logger.REPO) {
         parallelTasks["${logger.REPO}"] = generateStep(repo: "${logger.REPO}", filesType: 'json', filesPath: "${logger.SPEC_PATH}")
       }
     }
@@ -178,10 +178,10 @@ def createPRDescription(commit) {
   }
   if (env?.SPEC_UPDATED?.equals('true')){
     def gitLog = sh(script: """
-      git log --pretty=format:'* https://github.com/${env.ORG_NAME}/${env.REPO_NAME}/commit/%h %s' \
+      git log --pretty=format:'* https://github.com/${env.ORG_NAME}/${env.ECS_REPO}/commit/%h %s' \
           ${commit}...HEAD \
           --follow -- spec \
-      | sed 's/#\\([0-9]\\+\\)/https:\\/\\/github.com\\/${env.ORG_NAME}\\/${env.REPO_NAME}\\/pull\\/\\1/g' || true""", returnStdout: true)
+      | sed 's/#\\([0-9]\\+\\)/https:\\/\\/github.com\\/${env.ORG_NAME}\\/${env.ECS_REPO}\\/pull\\/\\1/g' || true""", returnStdout: true)
     message += "*Changeset*\n${gitLog}"
   }
   return message
