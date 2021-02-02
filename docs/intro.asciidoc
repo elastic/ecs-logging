@@ -33,7 +33,7 @@ Refer to the installation instructions of the individual loggers:
 * {ecs-logging-dotnet-ref}/setup.html[.NET]
 * Go: ({ecs-logging-go-zap-ref}/setup.html[zap]), ({ecs-logging-go-logrus-ref}/setup.html[logrus])
 * {ecs-logging-java-ref}/setup.html[Java]
-* https://github.com/elastic/ecs-logging-js[JavaScript]
+* https://github.com/elastic/ecs-logging-nodejs[Node.js]
 * https://github.com/elastic/ecs-logging-php[PHP]
 * {ecs-logging-python-ref}/installation.html[Python]
 * {ecs-logging-ruby-ref}/setup.html[Ruby]
