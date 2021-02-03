@@ -3,7 +3,7 @@
 set -uexo pipefail
 
 readonly REPO_NAME=${1}
-readonly SPECS_TYPE=${2} # json or gherkin
+readonly SPECS_TYPE=${2} # json
 readonly SPECS_DIR=${3}
 readonly REPO_DIR=".ci/${REPO_NAME}"
 
