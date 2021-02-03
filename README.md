@@ -20,7 +20,7 @@ Learn more in the [ECS Logging Reference](https://www.elastic.co/guide/en/ecs-lo
 * [.NET](https://github.com/elastic/ecs-dotnet) ([docs](https://www.elastic.co/guide/en/ecs-logging/dotnet/current/intro.html))
   * [Serilog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.Serilog)
   * [NLog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.NLog)
-* [Node.js](https://github.com/elastic/ecs-logging-nodejs)
+* [Node.js](https://github.com/elastic/ecs-logging-nodejs) ([docs](https://www.elastic.co/guide/en/ecs-logging/nodejs/current/intro.html))
   * [Pino](https://github.com/elastic/ecs-logging-nodejs/tree/master/loggers/pino)
   * [Winston](https://github.com/elastic/ecs-logging-nodejs/tree/master/loggers/winston)
   * [Morgan](https://github.com/elastic/ecs-logging-nodejs/tree/master/loggers/morgan)
