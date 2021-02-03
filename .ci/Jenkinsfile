@@ -132,7 +132,7 @@ def generateSteps() {
   def loggers = readYaml(file: '.ci/.jenkins-loggers.yml')
   def parallelTasks = [:]
   loggers['loggers'].each { logger ->
-    if (logger.SPEC_PATH.trim()) {
+    if (logger.SPEC_FILEPATH.trim()) {
       if (env.ECS_REPO == 'all' || env.ECS_REPO == logger.REPO) {
         parallelTasks["${logger.REPO}"] = generateStep(repo: "${logger.REPO}", filePath: "${logger.SPEC_FILEPATH}")
       }
