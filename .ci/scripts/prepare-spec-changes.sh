@@ -11,7 +11,7 @@ git clone "https://github.com/elastic/${REPO_NAME}" "${REPO_DIR}"
 SPECS_DIR=$(dirname "${SPECS_FILEPATH}")
 mkdir -p "${REPO_DIR}/${SPECS_DIR}"
 
-echo "Copying ${EXTENSION} files to the ${REPO_NAME} repo"
+echo "Copying files to the ${REPO_NAME} repo"
 cp -f spec/spec.json "${REPO_DIR}/${SPECS_FILEPATH}"
 
 cd "${REPO_DIR}"
