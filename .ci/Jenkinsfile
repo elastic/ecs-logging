@@ -134,7 +134,7 @@ def generateSteps() {
   loggers['loggers'].each { logger ->
     if (logger.SPEC_PATH.trim()) {
       if (env.ECS_REPO == 'all' || env.ECS_REPO == logger.REPO) {
-        parallelTasks["${logger.REPO}"] = generateStep(repo: "${logger.REPO}", filesType: 'json', filesPath: "${logger.SPEC_PATH}")
+        parallelTasks["${logger.REPO}"] = generateStep(repo: "${logger.REPO}", filePath: "${logger.SPEC_FILEPATH}")
       }
     }
   }
@@ -143,8 +143,7 @@ def generateSteps() {
 
 def generateStep(Map args = [:]){
   def repo = args.containsKey('repo') ? args.get('repo') : error('generateStep: repo argument is required')
-  def filesType = args.containsKey('filesType') ? args.get('filesType') : error('generateStep: filesType argument is required. Valid values: [json]')
-  def filesPath = args.containsKey('filesPath') ? args.get('filesPath') : error('generateStep: filesPath argument is required')
+  def filePath = args.containsKey('filePath') ? args.get('filePath') : error('generateStep: filePath argument is required')
   return {
     node('linux && immutable') {
       catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
@@ -152,12 +151,12 @@ def generateStep(Map args = [:]){
         unstash 'source'
         dir("${BASE_DIR}"){
           setupAPMGitEmail(global: true)
-          sh script: """.ci/scripts/prepare-spec-changes.sh "${repo}" "${filesType}" "${filesPath}" """, label: "Prepare ${filesType} changes for ${repo}"
+          sh script: """.ci/scripts/prepare-spec-changes.sh "${repo}" "${filePath}" """, label: "Prepare changes for ${repo}"
           dir(".ci/${repo}") {
             if (params.DRY_RUN_MODE || isPR()) {
               echo "DRY-RUN: ${repo} with description: '${env.PR_DESCRIPTION}'"
             } else {
-              githubCreatePullRequest(title: "test: synchronizing ${filesType} spec", labels: 'automation', description: "${env.PR_DESCRIPTION}")
+              githubCreatePullRequest(title: "test: synchronizing spec", labels: 'automation', description: "${env.PR_DESCRIPTION}")
             }
           }
         }
