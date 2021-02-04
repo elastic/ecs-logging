@@ -91,7 +91,7 @@ pipeline {
         script {
           dir("${BASE_DIR}"){
             regexps =[
-              "^spec/.*"
+              "^spec/spec.json"
             ]
             env.SPECS_UPDATED = isGitRegionMatch(
               from: "${env.COMMIT_FROM}",
