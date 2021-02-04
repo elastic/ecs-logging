@@ -2,7 +2,7 @@
 
 The specification aims to keep uniformity accross the libraries and to provide a human digestible output while producing a structured format.
 
-The ordering of the next three keys must be respected in every ecs-logging library:
+The ordering of the next three keys must be respected in every ecs-logging library (unless the logging framework makes this impossible):
 
 1. `@timestamp`, base field
 2. `log.level`, log field
