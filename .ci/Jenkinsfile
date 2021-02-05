@@ -156,7 +156,7 @@ def generateStep(Map args = [:]){
             if (params.DRY_RUN_MODE || isPR()) {
               echo "DRY-RUN: ${repo} with description: '${env.PR_DESCRIPTION}'"
             } else {
-              githubCreatePullRequest(title: "test: synchronizing spec", labels: 'automation', description: "${env.PR_DESCRIPTION}")
+              githubCreatePullRequest(title: "synchronize ecs-logging spec", labels: 'automation', description: "${env.PR_DESCRIPTION}")
             }
           }
         }
