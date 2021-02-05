@@ -18,5 +18,5 @@ cd "${REPO_DIR}"
 git config user.email
 git checkout -b "update-spec-files-$(date "+%Y%m%d%H%M%S")"
 git add "${SPECS_FILEPATH}"
-git commit -m "test: synchronizing specs"
+git commit -m "synchronize ecs-logging spec"
 git --no-pager log -1
