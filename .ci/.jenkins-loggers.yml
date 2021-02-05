@@ -1,0 +1,16 @@
+---
+loggers:
+  - REPO: "ecs-dotnet"
+    SPEC_FILEPATH: "tests/Elastic.CommonSchema.Tests/Specs/spec.json"
+  - REPO: "ecs-logging-go-logrus"
+    SPEC_FILEPATH: "internal/spec/v1.json"
+  - REPO: "ecs-logging-go-zap"
+    SPEC_FILEPATH: "internal/spec/v1.json"
+  - REPO: "ecs-logging-java"
+    SPEC_FILEPATH: "ecs-logging-core/src/test/resources/spec/spec.json"
+  - REPO: "ecs-logging-nodejs"
+    SPEC_FILEPATH: "utils/ecs-logging/spec.json"
+  - REPO: "ecs-logging-python"
+    SPEC_FILEPATH: "tests/resources/spec.json"
+  - REPO: "ecs-logging-ruby"
+    SPEC_FILEPATH: "spec/fixtures/spec/spec.json"
