@@ -34,7 +34,7 @@ Refer to the installation instructions of the individual loggers:
 * Go: {ecs-logging-go-zap-ref}/setup.html[zap], {ecs-logging-go-logrus-ref}/setup.html[logrus]
 * {ecs-logging-java-ref}/setup.html[Java]
 * Node.js: {ecs-logging-nodejs-ref}/morgan.html[morgan], {ecs-logging-nodejs-ref}/pino.html[pino], {ecs-logging-nodejs-ref}/winston.html[winston]
-* https://github.com/elastic/ecs-logging-php[PHP]
+* {ecs-logging-php-ref}/setup.html[PHP]
 * {ecs-logging-python-ref}/installation.html[Python]
 * {ecs-logging-ruby-ref}/setup.html[Ruby]
 
@@ -51,7 +51,7 @@ ECS-compatible JSON doesn't require the use of Logstash or grok parsing via an i
 +
 --
 The first three fields are `@timestamp`, `log.level` and `message`.
-This lets easily read the logs in a terminal without needing a tool that converts the logs to plain-text.
+This lets you easily read the logs in a terminal without needing a tool that converts the logs to plain-text.
 --
 
 *Enjoy the benefits of a common schema*::
