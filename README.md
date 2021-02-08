@@ -15,7 +15,7 @@ Learn more in the [ECS Logging Reference](https://www.elastic.co/guide/en/ecs-lo
   * [Log4j](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
   * [Java Util Logging](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
   * [JBoss LogManager](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
-* [PHP](https://github.com/elastic/ecs-logging-php)
+* [PHP](https://github.com/elastic/ecs-logging-php) ([docs](https://www.elastic.co/guide/en/ecs-logging/php/current/intro.html))
   * [Monolog v2.x](https://github.com/elastic/ecs-logging-php/blob/master/docs/Monolog_v2.md)
 * [.NET](https://github.com/elastic/ecs-dotnet) ([docs](https://www.elastic.co/guide/en/ecs-logging/dotnet/current/intro.html))
   * [Serilog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.Serilog)
