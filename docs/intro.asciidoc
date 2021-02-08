@@ -51,7 +51,7 @@ ECS-compatible JSON doesn't require the use of Logstash or grok parsing via an i
 +
 --
 The first three fields are `@timestamp`, `log.level` and `message`.
-It's also possible to format stack traces so that each element is rendered in a new line.
+This lets easily read the logs in a terminal without needing a tool that converts the logs to plain-text.
 --
 
 *Enjoy the benefits of a common schema*::
