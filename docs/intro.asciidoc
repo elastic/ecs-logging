@@ -41,10 +41,11 @@ Refer to the installation instructions of the individual loggers:
 [float]
 === Why ECS logging?
 
-*No parsing of the log file required*::
+*Simplicity: no manual parsing*::
 +
 --
-ECS-compatible JSON doesn't require the use of Logstash or grok parsing via an ingest node pipeline.
+Logs arrive pre-formatted, pre-enriched and ready to add value, making problems quicker and easier to identify.
+No more tedious grok parsing that has to be customized for every application.
 --
 
 *Decently human-readable JSON structure*::
