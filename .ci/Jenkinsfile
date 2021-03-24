@@ -177,7 +177,7 @@ def createPRDescription(commit) {
   if (params.FORCE_SEND_PR) {
     message += "*Manually forced with the CI automation job.*"
   }
-  if (env?.SPEC_UPDATED?.equals('true')){
+  if (env?.SPECS_UPDATED?.equals('true')){
     def gitLog = sh(script: """
       git log --pretty=format:'* https://github.com/${env.ORG_NAME}/${env.ECS_REPO}/commit/%h %s' \
           ${commit}...HEAD \
