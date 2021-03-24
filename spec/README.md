@@ -1,12 +1,12 @@
 # Specification
 
-The specification aims to keep uniformity accross the libraries and to provide a human digestible output while producing a structured format.
+The specification aims to keep uniformity across the libraries and to provide a human digestible output while producing a structured format.
 
 The ordering of the next three keys must be respected in every ecs-logging library (unless the logging framework makes this impossible):
 
 1. `@timestamp`, base field
 2. `log.level`, log field
-3. `message`, base field
+3. `message`, base field (if present)
 
 With the fourth key, `ecs.version` ([core](https://www.elastic.co/guide/en/ecs/current/ecs-ecs.html) field) in the [ND-JSON](https://github.com/ndjson/ndjson-spec) output, we define the *minimum viable product* (MVP) for a log line.
 `ecs.version` must be present in case of appenders that are not adding the `ecs.version` automatically.
@@ -23,10 +23,21 @@ The following example highlights the minimum set of keys in a ND-JSON output.
 {
     "@timestamp": "2016-05-23T08:05:34.853Z",
     "log.level": "NOTICE",
+    "ecs.version": "1.4.0"
+}
+```
+
+Most log records will include a "message" field:
+
+```json
+{
+    "@timestamp": "2016-05-23T08:05:34.853Z",
+    "log.level": "NOTICE",
     "message": "Hi, I am the spec for the ECS logging libraries.",
     "ecs.version": "1.4.0"
 }
 ```
+
 
 ### A richer Event Context
 
