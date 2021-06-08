@@ -79,7 +79,7 @@ Vice versa, you can also jump from a log line in the Logs UI to the Span Timelin
 We recommend shipping the logs with Filebeat.
 Depending on the way the application is deployed, you may log to a log file or to stdout (for example in Kubernetes).
 
-Here are a few benefits to over directly sending logs from the application to Elasticsearch:
+Here are a few benefits to this over directly sending logs from the application to Elasticsearch:
 
 *Resilient in case of outages*::
 +
