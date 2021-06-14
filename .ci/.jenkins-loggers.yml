@@ -6,6 +6,8 @@ loggers:
     SPEC_FILEPATH: "internal/spec/v1.json"
   - REPO: "ecs-logging-go-zap"
     SPEC_FILEPATH: "internal/spec/v1.json"
+  - REPO: "ecs-logging-go-zerolog"
+    SPEC_FILEPATH: "internal/spec/v1.json"
   - REPO: "ecs-logging-java"
     SPEC_FILEPATH: "ecs-logging-core/src/test/resources/spec/spec.json"
   - REPO: "ecs-logging-nodejs"
