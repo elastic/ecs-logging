@@ -90,6 +90,14 @@
             "required": false,
             "url": "https://www.elastic.co/guide/en/ecs/current/ecs-event.html",
             "default": "${service.name}.log OR ${service.name}.${appender.name}",
+            "sanitization": {
+                "value": {
+                    "replacements": ["\\", "/", "*", "?", "\"", "<", ">", "|", " ", ",", "#", ":", "-"],
+                    "substitute": "_",
+                    "max_chars": 100,
+                    "lower_case": true
+                }
+            },
             "comment": [
                 "Configurable by users.",
                 "If the user manually configures the service name,",
@@ -99,7 +107,51 @@
                 "they should set `event.dataset=${service.name}.${appender.name}` if the appender name is available in the logging library.",
                 "Otherwise, agents should also set `event.dataset=${service.name}.log`",
                 "",
-                "The field helps to filter for different log streams from the same pod, for example and is required for log anomaly detection."
+                "The field helps to filter for different log streams from the same pod, for example and is required for log anomaly detection.",
+                "",
+                "Must be in sync with `data_stream.dataset`."
+            ]
+        },
+        "data_stream.dataset": {
+            "type": "string",
+            "required": false,
+            "url": "https://github.com/elastic/ecs/blob/master/rfcs/text/0009-data_stream-fields.md",
+            "default": "${service.name}.log OR ${service.name}.${appender.name}",
+            "sanitization": {
+                "value": {
+                    "replacements": ["\\", "/", "*", "?", "\"", "<", ">", "|", " ", ",", "#", ":", "-"],
+                    "substitute": "_",
+                    "max_chars": 100,
+                    "lower_case": true
+                }
+            },
+            "comment": [
+                "Configurable by users.",
+                "Influences which data stream the logs will be stored in (`logs-{data_stream.dataset}-{data_stream.namespace}`)",
+                "If unspecified, Filebeat will set the value to `generic`.",
+                "",
+                "Must be in sync with `event.dataset`."
+            ]
+        },
+        "data_stream.namespace": {
+            "type": "string",
+            "required": false,
+            "url": "https://github.com/elastic/ecs/pull/1145",
+            "default": null,
+            "sanitization": {
+                "value": {
+                    "replacements": ["\\", "/", "*", "?", "\"", "<", ">", "|", " ", ",", "#", ":"],
+                    "substitute": "_",
+                    "max_chars": 100,
+                    "lower_case": true
+                }
+            },
+            "comment": [
+                "Configurable by users.",
+                "Influences which data stream the logs will be stored in (`logs-{data_stream.dataset}-{data_stream.namespace}`)",
+                "If unspecified, Filebeat will set the value to `default`.",
+                "",
+                "Must be in sync with `data_stream.dataset`."
             ]
         },
         "process.thread.name": {
