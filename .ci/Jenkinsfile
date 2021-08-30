@@ -71,7 +71,7 @@ pipeline {
     // 1. we run the pipeline NOT in DRY_RUN_MODE, because we want to send real PRs
     // 2. we run the pipeline forcing sending real PRs, because we want so
     // Because the rest of the following stages will need these variables to check for changes,
-    // skipping this stage would not take effect in them, as they are covered by the 
+    // skipping this stage would not take effect in them, as they are covered by the
     // FORCE_SEND_PR check.
     stage('Check for spec changes'){
       when {
@@ -169,20 +169,22 @@ def generateStep(Map args = [:]){
 
 def createPRDescription(commit) {
   def message = """
-  ### What
-  ECS logging specs automatic sync
+### What
 
-  ### Why
-  """
+ECS logging specs automatic sync
+
+### Why
+
+"""
   if (params.FORCE_SEND_PR) {
-    message += "*Manually forced with the CI automation job.*"
+    message += "*Manually forced with the CI automation job.*\n\n"
   }
   if (env?.SPECS_UPDATED?.equals('true')){
     def gitLog = sh(script: """
-      git log --pretty=format:'* https://github.com/${env.ORG_NAME}/${env.ECS_REPO}/commit/%h %s' \
+      git log --pretty=format:'* https://github.com/${env.ORG_NAME}/${env.REPO}/commit/%h %s' \
           ${commit}...HEAD \
           --follow -- spec \
-      | sed 's/#\\([0-9]\\+\\)/https:\\/\\/github.com\\/${env.ORG_NAME}\\/${env.ECS_REPO}\\/pull\\/\\1/g' || true""", returnStdout: true)
+      | sed 's/#\\([0-9]\\+\\)/https:\\/\\/github.com\\/${env.ORG_NAME}\\/${env.REPO}\\/pull\\/\\1/g' || true""", returnStdout: true)
     message += "*Changeset*\n${gitLog}"
   }
   return message
