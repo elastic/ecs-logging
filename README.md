@@ -16,14 +16,14 @@ Learn more in the [ECS Logging Reference](https://www.elastic.co/guide/en/ecs-lo
   * [Java Util Logging](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
   * [JBoss LogManager](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)
 * [PHP](https://github.com/elastic/ecs-logging-php) ([docs](https://www.elastic.co/guide/en/ecs-logging/php/current/intro.html))
-  * [Monolog v2.x](https://github.com/elastic/ecs-logging-php/blob/master/docs/Monolog_v2.md)
+  * [Monolog v2.x](https://github.com/elastic/ecs-logging-php/blob/main/docs/Monolog_v2.md)
 * [.NET](https://github.com/elastic/ecs-dotnet) ([docs](https://www.elastic.co/guide/en/ecs-logging/dotnet/current/intro.html))
-  * [Serilog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.Serilog)
-  * [NLog](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.NLog)
+  * [Serilog](https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.CommonSchema.Serilog)
+  * [NLog](https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.CommonSchema.NLog)
 * [Node.js](https://github.com/elastic/ecs-logging-nodejs) ([docs](https://www.elastic.co/guide/en/ecs-logging/nodejs/current/intro.html))
-  * [Pino](https://github.com/elastic/ecs-logging-nodejs/tree/master/loggers/pino)
-  * [Winston](https://github.com/elastic/ecs-logging-nodejs/tree/master/loggers/winston)
-  * [Morgan](https://github.com/elastic/ecs-logging-nodejs/tree/master/loggers/morgan)
+  * [Pino](https://github.com/elastic/ecs-logging-nodejs/tree/main/loggers/pino)
+  * [Winston](https://github.com/elastic/ecs-logging-nodejs/tree/main/loggers/winston)
+  * [Morgan](https://github.com/elastic/ecs-logging-nodejs/tree/main/loggers/morgan)
 * [Python](https://github.com/elastic/ecs-logging-python) ([docs](https://www.elastic.co/guide/en/ecs-logging/python/current/intro.html))
 * Go
   * [zap](https://github.com/elastic/ecs-logging-go-zap) ([docs](https://www.elastic.co/guide/en/ecs-logging/go-zap/current/intro.html))
@@ -33,10 +33,10 @@ Learn more in the [ECS Logging Reference](https://www.elastic.co/guide/en/ecs-lo
 ## APM
 
 * [.NET](https://github.com/elastic/ecs-dotnet)
-  * [Serilog Enricher](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.Apm.SerilogEnricher)
-  * [NLog Enricher](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.Apm.NLog)
+  * [Serilog Enricher](https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.Apm.SerilogEnricher)
+  * [NLog Enricher](https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.Apm.NLog)
 
 ## Benchmarking
 
 * [.NET](https://github.com/elastic/ecs-dotnet)
-  * [BenchmarkDotNet Exporter](https://github.com/elastic/ecs-dotnet/tree/master/src/Elastic.CommonSchema.BenchmarkDotNetExporter)
+  * [BenchmarkDotNet Exporter](https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.CommonSchema.BenchmarkDotNetExporter)
