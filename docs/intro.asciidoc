@@ -67,7 +67,7 @@ Using a common schema across different services and teams makes it possible crea
 +
 --
 If you are using an {apm-agents-ref}/index.html[Elastic APM agent],
-you can leverage the {apm-get-started-ref}/observability-integrations.html#apm-logging-integration[log correlation feature] without any additional configuration.
+you can leverage the {apm-guide-ref}/log-correlation.html[log correlation feature] without any additional configuration.
 This lets you jump from the {kibana-ref}/spans.html[Span timeline in the APM UI] to the {observability-guide}/monitor-logs.html[Logs app],
 showing only the logs which belong to the corresponding request.
 Vice versa, you can also jump from a log line in the Logs UI to the Span Timeline of the APM UI.
