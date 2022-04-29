@@ -76,6 +76,24 @@
                 "When an APM agent is active, it should auto-configure this field if not already set."
             ]
         },
+        "service.environment": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-service.html#field-service-environment",
+            "comment": [
+                "Configurable by users.",
+                "When an APM agent is active, it should auto-configure this field if not already set."
+            ]
+        },
+        "service.version": {
+            "type": "string",
+            "required": false,
+            "url": "https://www.elastic.co/guide/en/ecs/current/ecs-service.html#field-service-version",
+            "comment": [
+                "Configurable by users.",
+                "When an APM agent is active, it should auto-configure this field if not already set."
+            ]
+        },
         "service.node.name": {
             "type": "string",
             "required": false,
