@@ -3,6 +3,30 @@
 . Follow the {filebeat-ref}/filebeat-installation-configuration.html[Filebeat quick start]
 . Add the following configuration to your `filebeat.yaml` file.
 
+For Filebeat 7.16+
+
+[source,yaml]
+.filebeat.yaml
+----
+filebeat.inputs:
+- type: filestream
+  paths: /path/to/logs.json
+  parsers:
+    - ndjson:
+        keys_under_root: true
+        overwrite_keys: true
+        add_error_key: true
+        expand_keys: true
+
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+  - add_kubernetes_metadata: ~
+----
+
+For Filebeat < 7.16
+
 [source,yaml]
 .filebeat.yaml
 ----
@@ -13,6 +37,12 @@ filebeat.inputs:
   json.overwrite_keys: true
   json.add_error_key: true
   json.expand_keys: true
+
+processors:
+- add_host_metadata: ~
+- add_cloud_metadata: ~
+- add_docker_metadata: ~
+- add_kubernetes_metadata: ~
 ----
 // end::logs[]
 
