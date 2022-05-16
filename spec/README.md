@@ -75,6 +75,7 @@ The following example describes a richer set of fields in an event that has not 
     "transaction.id": "00f067aa0ba902b7",
     "service.name": "opbeans",
     "service.version": "1.2.3",
+    "service.environment": "production",
     "event.dataset": "opbeans.log"
 }
 ```
