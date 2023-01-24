@@ -25,7 +25,6 @@
 // === Step 3: Configure Filebeat
 
 // tag::configure-filebeat[]
-include::./tab-widgets/code.asciidoc[]
 include::./tab-widgets/filebeat-widget.asciidoc[]
 
 For more information, see the {filebeat-ref}/configuring-howto-filebeat.html[Filebeat reference].
