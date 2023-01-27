@@ -9,21 +9,25 @@ For Filebeat 7.16+
 .filebeat.yaml
 ----
 filebeat.inputs:
-- type: filestream
+- type: filestream <1>
   paths: /path/to/logs.json
   parsers:
     - ndjson:
-        keys_under_root: true
-        overwrite_keys: true
-        add_error_key: true
-        expand_keys: true
+      overwrite_keys: true <2>
+      add_error_key: true <3>
+      expand_keys: true <4>
 
-processors:
+processors: <5>
   - add_host_metadata: ~
   - add_cloud_metadata: ~
   - add_docker_metadata: ~
   - add_kubernetes_metadata: ~
 ----
+<1> Use the filestream input to read lines from active log files.
+<2> Values from the decoded JSON object overwrite the fields that {filebeat} normally adds (type, source, offset, etc.) in case of conflicts.
+<3> {filebeat} adds an "error.message" and "error.type: json" key in case of JSON unmarshalling errors.
+<4> {filebeat} will recursively de-dot keys in the decoded JSON, and expand them into a hierarchical object structure.
+<5> Processors enhance your data. See {filebeat-ref}/filtering-and-enhancing-data.html[processors] to learn more.
 
 For Filebeat < 7.16
 
@@ -57,11 +61,13 @@ processors:
 [source,yaml]
 ----
 annotations:
-  co.elastic.logs/json.keys_under_root: true
-  co.elastic.logs/json.overwrite_keys: true
-  co.elastic.logs/json.add_error_key: true
-  co.elastic.logs/json.expand_keys: true
+  co.elastic.logs/json.overwrite_keys: true <1>
+  co.elastic.logs/json.add_error_key: true <2>
+  co.elastic.logs/json.expand_keys: true <3>
 ----
+<1> Values from the decoded JSON object overwrite the fields that {filebeat} normally adds (type, source, offset, etc.) in case of conflicts.
+<2> {filebeat} adds an "error.message" and "error.type: json" key in case of JSON unmarshalling errors.
+<3> {filebeat} will recursively de-dot keys in the decoded JSON, and expand them into a hierarchical object structure.
 // end::kubernetes[]
 
 
@@ -76,10 +82,11 @@ annotations:
 .docker-compose.yml
 ----
 labels:
-  co.elastic.logs/json.keys_under_root: true
-  co.elastic.logs/json.overwrite_keys: true
-  co.elastic.logs/json.add_error_key: true
-  co.elastic.logs/json.expand_keys: true
+  co.elastic.logs/json.overwrite_keys: true <1>
+  co.elastic.logs/json.add_error_key: true <2>
+  co.elastic.logs/json.expand_keys: true <3>
 ----
+<1> Values from the decoded JSON object overwrite the fields that {filebeat} normally adds (type, source, offset, etc.) in case of conflicts.
+<2> {filebeat} adds an "error.message" and "error.type: json" key in case of JSON unmarshalling errors.
+<3> {filebeat} will recursively de-dot keys in the decoded JSON, and expand them into a hierarchical object structure.
 // end::docker[]
-
