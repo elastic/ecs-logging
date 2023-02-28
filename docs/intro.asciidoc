@@ -186,6 +186,15 @@ Refer to the documentation of the individual loggers on how to set these fields.
 | Helps to filter the logs by service.
 |`"my-service"`
 
+|{ecs-ref}/ecs-service.html[`service.version`]
+| Helps to filter the logs by service version.
+|`"1.0"`
+
+|{ecs-ref}/ecs-service.html[`service.environment`]
+| Helps to filter the logs by environment.
+|`"production"`
+
+
 |{ecs-ref}/ecs-event.html[`event.dataset`]
 | Enables the {observability-guide}/inspect-log-anomalies.html[log rate anomaly detection].
 |`"my-service.log"`
