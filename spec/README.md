@@ -76,7 +76,7 @@ The following example describes a richer set of fields in an event that has not 
     "service.name": "opbeans",
     "service.version": "1.2.3",
     "service.environment": "production",
-    "event.dataset": "opbeans.log"
+    "event.dataset": "opbeans"
 }
 ```
 
