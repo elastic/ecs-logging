@@ -13,9 +13,9 @@ filebeat.inputs:
   paths: /path/to/logs.json
   parsers:
     - ndjson:
-      overwrite_keys: true <2>
-      add_error_key: true <3>
-      expand_keys: true <4>
+        overwrite_keys: true <2>
+        add_error_key: true <3>
+        expand_keys: true <4>
 
 processors: <5>
   - add_host_metadata: ~
