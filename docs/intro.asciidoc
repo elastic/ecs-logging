@@ -31,7 +31,7 @@ They make it easy to format your logs into ECS-compatible JSON. For example:
 Refer to the installation instructions of the individual loggers:
 
 * {ecs-logging-dotnet-ref}/setup.html[.NET]
-* Go: {ecs-logging-go-zap-ref}/setup.html[zap], {ecs-logging-go-logrus-ref}/setup.html[logrus]
+* Go: {ecs-logging-go-zap-ref}/setup.html[zap], {ecs-logging-go-logrus-ref}/setup.html[logrus], {ecs-logging-go-zerolog-ref}/setup.html[zerolog]
 * {ecs-logging-java-ref}/setup.html[Java]
 * Node.js: {ecs-logging-nodejs-ref}/morgan.html[morgan], {ecs-logging-nodejs-ref}/pino.html[pino], {ecs-logging-nodejs-ref}/winston.html[winston]
 * {ecs-logging-php-ref}/setup.html[PHP]
