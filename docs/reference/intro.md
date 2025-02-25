@@ -57,7 +57,7 @@ Using a common schema across different services and teams makes it possible crea
 
 
 **APM Log correlation**
-:   If you are using an [Elastic APM agent](docs-content://docs/reference/ingestion-tools/apm/apm-agents.md), you can leverage the log correlation feature without any additional configuration. This lets you jump from the [Span timeline in the APM UI](docs-content://solutions/observability/apps/trace-sample-timeline.md) to the [Logs app](docs-content://solutions/observability/logs/explore-logs.md), showing only the logs which belong to the corresponding request. Vice versa, you can also jump from a log line in the Logs UI to the Span Timeline of the APM UI. For more information about the log correlation feature, refer to [](docs-content://solutions/observability/logs/stream-application-logs.md).
+:   If you are using an [Elastic APM agent](docs-content://reference/ingestion-tools/apm/apm-agents.md), you can leverage the log correlation feature without any additional configuration. This lets you jump from the [Span timeline in the APM UI](docs-content://solutions/observability/apps/trace-sample-timeline.md) to the [Logs app](docs-content://solutions/observability/logs/explore-logs.md), showing only the logs which belong to the corresponding request. Vice versa, you can also jump from a log line in the Logs UI to the Span Timeline of the APM UI. For more information about the log correlation feature, refer to [](docs-content://solutions/observability/logs/stream-application-logs.md).
 
 ### Additional advantages when using in combination with Filebeat [_additional_advantages_when_using_in_combination_with_filebeat]
 
