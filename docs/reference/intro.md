@@ -13,7 +13,7 @@ Centralized application logging with the Elastic stack made easy.
 
 ## What is ECS? [_what_is_ecs]
 
-Elastic Common Schema (ECS) defines a common set of fields for ingesting data into Elasticsearch. For more information about ECS, visit the [ECS Reference Documentation](ecs://docs/reference/index.md).
+Elastic Common Schema (ECS) defines a common set of fields for ingesting data into Elasticsearch. For more information about ECS, visit the [ECS Reference Documentation](ecs://reference/index.md).
 
 
 ## What is ECS logging? [_what_is_ecs_logging]
@@ -31,13 +31,13 @@ ECS loggers are plugins for your favorite logging library. They make it easy to 
 
 Refer to the installation instructions of the individual loggers:
 
-* [.NET](ecs-dotnet://docs/reference/setup.md)
-* Go: [zap](ecs-logging-go-zap://docs/reference/setup.md), [logrus](ecs-logging-go-logrus://docs/reference/setup.md), [zerolog](ecs-logging-go-zerolog://docs/reference/setup.md)
-* [Java](ecs-logging-java://docs/reference/setup.md)
-* Node.js: [morgan](ecs-logging-nodejs://docs/reference/morgan.md), [pino](ecs-logging-nodejs://docs/reference/pino.md), [winston](ecs-logging-nodejs://docs/reference/winston.md)
-* [PHP](ecs-logging-php://docs/reference/setup.md)
-* [Python](ecs-logging-python://docs/reference/installation.md)
-* [Ruby](ecs-logging-ruby://docs/reference/setup.md)
+* [.NET](ecs-dotnet://reference/setup.md)
+* Go: [zap](ecs-logging-go-zap://reference/setup.md), [logrus](ecs-logging-go-logrus://reference/setup.md), [zerolog](ecs-logging-go-zerolog://reference/setup.md)
+* [Java](ecs-logging-java://reference/setup.md)
+* Node.js: [morgan](ecs-logging-nodejs://reference/morgan.md), [pino](ecs-logging-nodejs://reference/pino.md), [winston](ecs-logging-nodejs://reference/winston.md)
+* [PHP](ecs-logging-php://reference/setup.md)
+* [Python](ecs-logging-python://reference/installation.md)
+* [Ruby](ecs-logging-ruby://reference/setup.md)
 
 
 ## Why ECS logging? [_why_ecs_logging]
@@ -66,19 +66,19 @@ We recommend shipping the logs with Filebeat. Depending on the way the applicati
 Here are a few benefits to this over directly sending logs from the application to Elasticsearch:
 
 **Resilient in case of outages**
-:   [Guaranteed at-least-once delivery](beats://docs/reference/filebeat/how-filebeat-works.md#at-least-once-delivery) without buffering within the application, thus no risk of out of memory errors or lost events. There’s also the option to use either the JSON logs or plain-text logs as a fallback.
+:   [Guaranteed at-least-once delivery](beats://reference/filebeat/how-filebeat-works.md#at-least-once-delivery) without buffering within the application, thus no risk of out of memory errors or lost events. There’s also the option to use either the JSON logs or plain-text logs as a fallback.
 
 
 **Loose coupling**
-:   The application does not need to know the details of the logging backend (URI, credentials, etc.). You can also leverage alternative [Filebeat outputs](beats://docs/reference/filebeat/configuring-output.md), like Logstash, Kafka or Redis.
+:   The application does not need to know the details of the logging backend (URI, credentials, etc.). You can also leverage alternative [Filebeat outputs](beats://reference/filebeat/configuring-output.md), like Logstash, Kafka or Redis.
 
 
 **Index Lifecycle management**
-:   Leverage Filebeat’s default [index lifecycle management settings](beats://docs/reference/filebeat/ilm.md). This is much more efficient than using daily indices.
+:   Leverage Filebeat’s default [index lifecycle management settings](beats://reference/filebeat/ilm.md). This is much more efficient than using daily indices.
 
 
 **Efficient Elasticsearch mappings**
-:   Leverage Filebeat’s default ECS-compatible [index template](beats://docs/reference/filebeat/configuration-template.md).
+:   Leverage Filebeat’s default ECS-compatible [index template](beats://reference/filebeat/configuration-template.md).
 
 
 
@@ -91,17 +91,17 @@ These fields are populated by the ECS loggers by default. Some of them, such as 
 
 | ECS field | Description | Example |
 | --- | --- | --- |
-| [`@timestamp`](ecs://docs/reference/ecs-base.md) | The timestamp of the log event. | `"2019-08-06T12:09:12.375Z"` |
-| [`log.level`](ecs://docs/reference/ecs-log.md) | The level or severity of the log event. | `"INFO"` |
-| [`log.logger`](ecs://docs/reference/ecs-log.md) | The name of the logger inside an application. | `"org.example.MyClass"` |
-| [`log.origin.file.name`](ecs://docs/reference/ecs-log.md) | The name of the file containing the source code which originated the log event. | `"App.java"` |
-| [`log.origin.file.line`](ecs://docs/reference/ecs-log.md) | The line number of the file containing the source code which originated the log event. | `42` |
-| [`log.origin.function`](ecs://docs/reference/ecs-log.md) | The name of the function or method which originated the log event. | `"methodName"` |
-| [`message`](ecs://docs/reference/ecs-base.md) | The log message. | `"Hello World!"` |
-| [`error.type`](ecs://docs/reference/ecs-error.md) | Only present for logs that contain an exception or error. The type or class of the error if this log event contains an exception. | `"java.lang.NullPointerException"` |
-| [`error.message`](ecs://docs/reference/ecs-error.md) | Only present for logs that contain an exception or error. The message of the exception or error. | `"The argument cannot be null"` |
-| [`error.stack_trace`](ecs://docs/reference/ecs-error.md) | Only present for logs that contain an exception or error. The full stack trace of the exception or error as a raw string. | `"Exception in thread "main" java.lang.NullPointerException\n\tat org.example.App.methodName(App.java:42)"` |
-| [`process.thread.name`](ecs://docs/reference/ecs-process.md) | The name of the thread the event has been logged from. | `"main"` |
+| [`@timestamp`](ecs://reference/ecs-base.md) | The timestamp of the log event. | `"2019-08-06T12:09:12.375Z"` |
+| [`log.level`](ecs://reference/ecs-log.md) | The level or severity of the log event. | `"INFO"` |
+| [`log.logger`](ecs://reference/ecs-log.md) | The name of the logger inside an application. | `"org.example.MyClass"` |
+| [`log.origin.file.name`](ecs://reference/ecs-log.md) | The name of the file containing the source code which originated the log event. | `"App.java"` |
+| [`log.origin.file.line`](ecs://reference/ecs-log.md) | The line number of the file containing the source code which originated the log event. | `42` |
+| [`log.origin.function`](ecs://reference/ecs-log.md) | The name of the function or method which originated the log event. | `"methodName"` |
+| [`message`](ecs://reference/ecs-base.md) | The log message. | `"Hello World!"` |
+| [`error.type`](ecs://reference/ecs-error.md) | Only present for logs that contain an exception or error. The type or class of the error if this log event contains an exception. | `"java.lang.NullPointerException"` |
+| [`error.message`](ecs://reference/ecs-error.md) | Only present for logs that contain an exception or error. The message of the exception or error. | `"The argument cannot be null"` |
+| [`error.stack_trace`](ecs://reference/ecs-error.md) | Only present for logs that contain an exception or error. The full stack trace of the exception or error as a raw string. | `"Exception in thread "main" java.lang.NullPointerException\n\tat org.example.App.methodName(App.java:42)"` |
+| [`process.thread.name`](ecs://reference/ecs-process.md) | The name of the thread the event has been logged from. | `"main"` |
 
 
 ### Configurable fields [_configurable_fields]
@@ -110,16 +110,16 @@ Refer to the documentation of the individual loggers on how to set these fields.
 
 | ECS field | Description | Example |
 | --- | --- | --- |
-| [`service.name`](ecs://docs/reference/ecs-service.md) | Helps to filter the logs by service. | `"my-service"` |
-| [`service.version`](ecs://docs/reference/ecs-service.md) | Helps to filter the logs by service version. | `"1.0"` |
-| [`service.environment`](ecs://docs/reference/ecs-service.md) | Helps to filter the logs by environment. | `"production"` |
-| [`service.node.name`](ecs://docs/reference/ecs-service.md) | Allow for two nodes of the same service, on the same host to be differentiated. | `"instance-0000000016"` |
-| [`event.dataset`](ecs://docs/reference/ecs-event.md) | Enables the [log rate anomaly detection](docs-content://solutions/observability/logs/inspect-log-anomalies.md). | `"my-service"` |
+| [`service.name`](ecs://reference/ecs-service.md) | Helps to filter the logs by service. | `"my-service"` |
+| [`service.version`](ecs://reference/ecs-service.md) | Helps to filter the logs by service version. | `"1.0"` |
+| [`service.environment`](ecs://reference/ecs-service.md) | Helps to filter the logs by environment. | `"production"` |
+| [`service.node.name`](ecs://reference/ecs-service.md) | Allow for two nodes of the same service, on the same host to be differentiated. | `"instance-0000000016"` |
+| [`event.dataset`](ecs://reference/ecs-event.md) | Enables the [log rate anomaly detection](docs-content://solutions/observability/logs/inspect-log-anomalies.md). | `"my-service"` |
 
 
 ### Custom fields [_custom_fields]
 
 Most loggers allow you to add additional custom fields. This includes both, static and dynamic ones. Examples for dynamic fields are logging structured objects, or fields from a thread local context, such as `MDC` or `ThreadContext`.
 
-When adding custom fields, we recommend using existing [ECS fields](ecs://docs/reference/ecs-field-reference.md) for these custom values. If there is no appropriate ECS field, consider prefixing your fields with `labels.`, as in `labels.foo`, for simple key/value pairs. For nested structures, consider prefixing with `custom.`. This approach protects against conflicts in case ECS later adds the same fields but with a different mapping.
+When adding custom fields, we recommend using existing [ECS fields](ecs://reference/ecs-field-reference.md) for these custom values. If there is no appropriate ECS field, consider prefixing your fields with `labels.`, as in `labels.foo`, for simple key/value pairs. For nested structures, consider prefixing with `custom.`. This approach protects against conflicts in case ECS later adds the same fields but with a different mapping.
 
