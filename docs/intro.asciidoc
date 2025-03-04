@@ -1,6 +1,7 @@
 [[intro]]
 == Introduction
 
+Test!
 
 Centralized application logging with the Elastic stack made easy.
 
