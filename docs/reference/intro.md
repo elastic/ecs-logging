@@ -4,6 +4,7 @@ mapped_pages:
   - https://www.elastic.co/guide/en/ecs-logging/overview/current/index.html
 ---
 
+
 # ECS logging libraries [intro]
 
 Centralized application logging with the Elastic stack made easy.
