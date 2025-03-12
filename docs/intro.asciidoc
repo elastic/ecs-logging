@@ -3,6 +3,8 @@
 
 Test!
 
+Another edit. 
+
 Centralized application logging with the Elastic stack made easy.
 
 [role="screenshot"]
