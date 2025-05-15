@@ -1,4 +1,6 @@
 project: 'ECS logging libraries'
+products:
+  - id: ecs-logging
 cross_links:
   - beats
   - docs-content
