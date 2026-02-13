@@ -1,4 +1,12 @@
 ---
+applies_to:
+  stack: ga
+  serverless: ga
+products:
+  - id: ecs-logging
+  - id: elastic-stack
+  - id: elasticsearch
+  - id: kibana
 mapped_pages:
   - https://www.elastic.co/guide/en/ecs-logging/overview/current/intro.html
   - https://www.elastic.co/guide/en/ecs-logging/overview/current/index.html
@@ -60,6 +68,11 @@ Using a common schema across different services and teams makes it possible crea
 :   If you are using an [Elastic APM agent](docs-content://reference/apm-agents/index.md), you can leverage the log correlation feature without any additional configuration. This lets you jump from the [Span timeline in the APM UI](docs-content://solutions/observability/apps/trace-sample-timeline.md) to the [Logs app](docs-content://solutions/observability/logs/explore-logs.md), showing only the logs which belong to the corresponding request. Vice versa, you can also jump from a log line in the Logs UI to the Span Timeline of the APM UI. For more information about the log correlation feature, refer to [Stream application logs](docs-content://solutions/observability/logs/stream-application-logs.md).
 
 ### Additional advantages when using in combination with Filebeat [_additional_advantages_when_using_in_combination_with_filebeat]
+
+```{applies_to}
+stack: ga
+serverless: unavailable
+```
 
 We recommend shipping the logs with Filebeat. Depending on the way the application is deployed, you may log to a log file or to stdout (for example in Kubernetes).
 
